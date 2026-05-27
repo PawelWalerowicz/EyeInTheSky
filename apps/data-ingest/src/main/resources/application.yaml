@@ -1,3 +1,25 @@
 spring:
   application:
     name: eits-data-ingest
+  security:
+    oauth2:
+      client:
+        registration:
+          opensky:
+            client-id: ${OPENSKY_CLIENT_ID}
+            client-secret: ${OPENSKY_CLIENT_SECRET}
+            authorization-grant-type: client_credentials
+        provider:
+          opensky:
+            token-uri: https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token
+opensky:
+  endpoint: https://opensky-network.org/api/states/all
+  connection-timeout-ms: 100
+  read-timeout-ms: 9500
+
+resilience4j.retry:
+  instances:
+    opensky:
+      maxAttempts: 2
+      waitDuration: 10s
+      enableExponentialBackoff: false
