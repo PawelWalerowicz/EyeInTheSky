@@ -1,0 +1,18 @@
+message StateVector {
+    string correlationId = 1;
+    string icaoAddess = 2;
+    string originCountry = 3;
+    optional int64 timePosition = 4;
+    int64 lastContact = 5;
+    optional float longitude = 6;
+    optional float latitude = 7;
+    optional float barometricAltitude = 8;
+    optional float geometricAltitude = 9;
+    bool onGround = 10;
+    optional float velocity = 11;
+    optional float trueTrack = 12;
+    optional verticalRate = 13;
+    optional string squawk = 14;
+    bool spi = 15;
+    string positionSource = 16;
+}
