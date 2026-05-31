@@ -40,7 +40,6 @@ class OpenSkyPayloadMapper {
                     .squawk(cast(state[14], String.class))
                     .spi(cast(state[15], Boolean.class))
                     .positionSource(StateVector.PositionSource.fromCode(castToNumber(state[16], Integer.class)))
-//                .category(StateVector.Category.fromCode(cast(state[17], Integer.class))) // no category found?
                     .build();
         } catch (RuntimeException e) {
             System.out.println(ArrayUtils.toUnmodifiableList(state));

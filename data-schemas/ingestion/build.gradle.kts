@@ -17,9 +17,11 @@ repositories {
 }
 
 dependencies {
-
+	implementation("com.google.protobuf:protobuf-java:4.35.0")
 }
 
-tasks.withType<Test> {
-	useJUnitPlatform()
+protobuf {
+	protoc {
+		artifact = "com.google.protobuf:protoc:4.35.0"
+	}
 }
