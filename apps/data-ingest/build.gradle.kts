@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
 	java
 	id("org.springframework.boot") version "4.0.6"
@@ -25,7 +27,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-kafka")
 	implementation("org.springframework.boot:spring-boot-starter-restclient")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
-	implementation ("io.github.resilience4j:resilience4j-spring-boot4:2.4.0")
+	implementation("io.github.resilience4j:resilience4j-spring-boot4:2.4.0")
+	implementation(project(":data-schemas:ingestion"))
 	compileOnly("org.projectlombok:lombok")
 	runtimeOnly("io.micrometer:micrometer-registry-otlp")
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
