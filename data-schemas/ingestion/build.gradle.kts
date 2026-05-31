@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-	implementation("com.google.protobuf:protobuf-java:4.35.0")
+	implementation(libs.protobuf.java)
 }
 
 protobuf {

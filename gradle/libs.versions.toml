@@ -1,0 +1,7 @@
+[versions]
+resilience4j = "2.4.0"
+protobuf="4.35.0"
+
+[libraries]
+resilience4j-spring-boot4 = { module = "io.github.resilience4j:resilience4j-spring-boot4", version.ref = "resilience4j" }
+protobuf-java = { module = "com.google.protobuf:protobuf-java", version.ref = "protobuf" }
