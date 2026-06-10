@@ -12,6 +12,15 @@ spring:
         provider:
           opensky:
             token-uri: https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token
+  kafka:
+    bootstrap-servers: kafka:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+      properties:
+        acks: all
+        retries: 3
 opensky:
   endpoint: https://opensky-network.org/api/states/all
   connection-timeout-ms: 100

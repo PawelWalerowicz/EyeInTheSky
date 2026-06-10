@@ -68,6 +68,12 @@ services:
       KAFKA_BROKERS: kafka:9092
       KAFKA_CLIENT_ID: console
       KAFKA_SASL_ENABLED: "false"
+      KAFKA_PROTOBUF_FILEPATH: /schemas/schema.desc
+      PROTOBUF_SCHEMA_PATH: /schemas/schema.desc
+      KAFKA_PROTOBUF_MESSAGE_TYPE_MAP: |
+        current-flights-data=walerowicz.eits.ingest.v1.StateVector
+    volumes:
+      - ./data-schemas/ingestion/build/descriptors:/schemas
     depends_on:
       - kafka
     networks:

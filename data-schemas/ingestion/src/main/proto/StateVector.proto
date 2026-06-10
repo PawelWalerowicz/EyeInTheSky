@@ -7,7 +7,7 @@ option java_generate_equals_and_hash = true;
 
 message StateVector {
     string correlationId = 1;
-    string icaoAddess = 2;
+    string icaoAddress = 2;
     string originCountry = 3;
     optional int64 timePosition = 4;
     int64 lastContact = 5;

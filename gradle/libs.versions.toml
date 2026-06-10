@@ -1,7 +1,9 @@
 [versions]
 resilience4j = "2.4.0"
 protobuf="4.35.0"
+uuid-generator="4.1.0"
 
 [libraries]
 resilience4j-spring-boot4 = { module = "io.github.resilience4j:resilience4j-spring-boot4", version.ref = "resilience4j" }
 protobuf-java = { module = "com.google.protobuf:protobuf-java", version.ref = "protobuf" }
+uuid-generator = { module = "com.fasterxml.uuid:java-uuid-generator", version.ref = "uuid-generator"}

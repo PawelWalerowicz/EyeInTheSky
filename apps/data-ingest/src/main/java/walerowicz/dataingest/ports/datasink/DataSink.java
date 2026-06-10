@@ -1,6 +1,6 @@
 package walerowicz.dataingest.ports.datasink;
 
-import walerowicz.dataingest.domain.StateVector;
+import walerowicz.eits.ingest.v1.StateVector;
 
 public interface DataSink {
 
